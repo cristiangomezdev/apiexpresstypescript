@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc":"tsc",
+    "dev":"ts-node-dev src/index.js",
+    "start": "node build/index.js ",
+    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "cristian",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "express": "4.18.1"
   }
 }
