@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"ts-node-dev src/index.js",
+    "dev": "ts-node-dev src/index.js",
+    "lint":"ts-standart",
     "start": "node build/index.js ",
+    "build": "tsc",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +20,13 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "express": "4.18.1"
+    "express": "4.18.1",
+    "ts-standard": "^11.0.0"
+  },
+  "eslintConfig": {
+    "parserOptions":{
+      "project":"./tsconfig.json"
+    },
+    "extends":["./node_modules/ts-standard/eslintrc.json"]
   }
 }
